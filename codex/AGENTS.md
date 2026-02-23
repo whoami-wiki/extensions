@@ -1,0 +1,1 @@
+../plugins/whoami/CLAUDE.md
