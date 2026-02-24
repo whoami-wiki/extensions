@@ -9,7 +9,9 @@ pages in the wiki's source namespace. Source pages have information about differ
 
 Source pages contain a **Querying** section with instructions for programmatic access to the vault (located in Application Support/whoami/vault) — SQL queries for databases, JSON parsing for exports, file lookup via snapshot hashes. Always read the relevant source page before attempting to extract data.
 
-Use `wai snapshot <dir>` to snapshot a directory. It hashes files into `vault/objects/`, writes a manifest to `vault/snapshots/`, and creates a `Source:` wiki page. The vault is located at `~/Library/Application Support/whoami/vault` (configurable via `WAI_VAULT_PATH`).
+Use `wai snapshot <dir>` to snapshot a directory. It hashes files into `vault/objects/`, writes a manifest to `vault/snapshots/`, and creates a `Source:` wiki page with a basic `{{Source}}` infobox and file-type inventory. **This initial page is a skeleton** — enrich it by opening the actual data (databases, JSON files) and documenting: overview statistics, key files, content breakdowns, top conversations, volume over time, data quality notes, and querying instructions. See the editorial guide's source page section for the full structure.
+
+The vault is located at `~/Library/Application Support/whoami/vault` (configurable via `WAI_VAULT_PATH`).
 
 Structure of the vault:
 - objects/

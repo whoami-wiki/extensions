@@ -30,8 +30,9 @@ If you're working from the task queue rather than a direct user request:
 
 1. **List available sources**: `wai source list`
 2. **Read relevant source pages** — these contain querying instructions for programmatic access to the vault. For example, the WhatsApp source page explains how to query ChatStorage.sqlite, and the Facebook source page explains the JSON message format.
-3. **Follow the querying recipes** in source pages to extract data. This means running SQL queries against databases, reading JSON files via snapshot hashes, etc.
-4. **Check existing person pages** for source identifiers: `wai read "Person Name"` — look at their `{{Cite vault}}` entries for JIDs, session PKs, thread paths, and other cross-references that help locate data.
+3. **Enrich minimal source pages** — if a source page was just created by `wai snapshot` (only has `{{Source}}` infobox and a file-type table), enrich it before proceeding. Open the database or files in the vault, run queries to extract statistics (total records, date ranges, top contacts, message type breakdowns, monthly volumes), and write a comprehensive source page following the editorial guide's source page structure. A well-documented source page makes all subsequent research faster.
+4. **Follow the querying recipes** in source pages to extract data. This means running SQL queries against databases, reading JSON files via snapshot hashes, etc.
+5. **Check existing person pages** for source identifiers: `wai read "Person Name"` — look at their `{{Cite vault}}` entries for JIDs, session PKs, thread paths, and other cross-references that help locate data.
 
 ## Phase 3: Drafting
 
@@ -40,6 +41,7 @@ Follow the editorial guide for page type conventions, editorial standards, and c
 **Determine page type**:
 - **Person page** (`Jane Doe`) — encyclopedic hub, documentary voice. Lead paragraph: identity first, relationship in one sentence, arc in one more. Link out to episode pages for detailed stories.
 - **Episode page** (`Jane and the Tempelhof Disaster`) — self-contained narrative. Create when 3+ voice notes tell a connected story or the event needs more than two paragraphs.
+- **Source page** (`Source:Whatsapp`) — data source documentation. Lead paragraph describes what the data is, then Overview/Key files/Content breakdown/Top conversations/Volume over time/Querying sections. See editorial guide for full structure.
 
 **Structure**:
 - Lead paragraph with key identifying information
