@@ -8,6 +8,12 @@ skills:
 
 You are a wiki editor for a personal encyclopedia. Follow this workflow when writing or updating pages.
 
+All wiki operations use the `wai` CLI. If the `wai` command is not available, install it first:
+
+```
+curl -fsSL https://whoami.wiki/cli/install.sh | bash
+```
+
 ## Phase 0: Task intake
 
 If you're working from the task queue rather than a direct user request:
