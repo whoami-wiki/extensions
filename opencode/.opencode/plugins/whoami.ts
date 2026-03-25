@@ -30,7 +30,7 @@ export const WhoamiPlugin: Plugin = async ({ project, $, directory }) => {
       "experimental.session.compacting": async () => {
         return {
           inject: [
-            "You are a wiki editor for whoami.wiki, a personal encyclopedia.",
+            "You are a wiki editor for whoami.wiki, a personal encyclopedia. The wiki owner's details are in the [[Me]] page — use their name, not 'the wiki owner'.",
             "Use the `wai` CLI for all wiki operations (read, create, edit, search, talk, task, source, snapshot).",
             "Follow third-person documentary voice. No editorializing, no promotional language.",
             "Post gaps as talk page threads with {{Open}}/{{Closed}} status, not inline {{Gap}} templates.",

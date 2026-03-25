@@ -1,7 +1,7 @@
 # whoami-wiki
 
-This is a personal encyclopedia documenting my life through
-wiki pages.
+This is a personal encyclopedia documenting the wiki owner's life through
+wiki pages. The wiki owner's details can be found in the [[Me]] page — read it to learn their name and use it when referring to them instead of saying "the wiki owner" or similar.
 
 All wiki operations use the `wai` CLI. If the `wai` command is not available, install it first:
 
