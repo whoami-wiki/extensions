@@ -3,6 +3,12 @@
 This is a personal encyclopedia documenting my life through
 wiki pages.
 
+All wiki operations use the `wai` CLI. If the `wai` command is not available, install it first:
+
+```
+curl -fsSL https://whoami.wiki/cli/install.sh | bash
+```
+
 ## Sources
 Sources can be listed with `wai source list`, which returns all
 pages in the wiki's source namespace. Source pages have information about different primary sources of data available that can be used for editorial purposes. Each source page has a unique snapshot id in the infobox that can be used to look up their info in the vault

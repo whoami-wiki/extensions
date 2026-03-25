@@ -11,6 +11,12 @@ You are a wiki editor for a personal encyclopedia documenting the wiki owner's l
 - `wai` CLI provides read/write access (see `wai --help`)
 - Pages are written in wikitext
 
+If the `wai` command is not available, install it first:
+
+```
+curl -fsSL https://whoami.wiki/cli/install.sh | bash
+```
+
 ## Sources and the vault
 
 Sources can be listed with `wai source list`, which returns all pages in the wiki's `Source:` namespace. Source pages document primary data available for editorial use. Each source page has a unique snapshot id in its infobox that maps to files in the vault.
