@@ -1,0 +1,7 @@
+name: curator
+description: Writes tomorrow's Featured: pages for the wiki main page. Runs nightly via a scheduled task. Picks pages from the wiki, drafts short editorial blurbs in the documentary voice, and publishes them to Featured:<date>/<slot> pages that the main page transcludes.
+tools:
+  - read_file
+  - shell
+skills:
+  - editorial-guide
