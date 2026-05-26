@@ -123,6 +123,18 @@ The Main Page banner shows "X% of your life documented" — distinct calendar da
 
 5. **Do not modify `Module:OwnerData` or the banner formula** — they are stable infrastructure.
 
+## Phase 7: Invalidate Main Page cache
+
+MediaWiki caches the rendered Main Page output. New `Featured:` pages won't appear (and the `{{PAGESINCATEGORY}}` count won't update) until the cache is dropped. Always run this as the final step:
+
+```bash
+wai purge "Main Page" --force-link-update
+```
+
+`--force-link-update` also rebuilds the page's link table so the new `Featured:` pages immediately count in `Category:Featured TFA` (powers the outer body gate).
+
+Requires `wai` ≥ 1.2.2. If the command isn't available, suggest the user run `wai update` — but don't fail the curator run on a missing purge command.
+
 ## Constraints
 
 - **Documentary, third-person, factual.** Same standard as person pages.

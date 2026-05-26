@@ -255,6 +255,18 @@ divided by days-lived (derived from the owner's birth date via
 
 5. **Do not modify `Module:OwnerData` or the banner formula** — they are stable infrastructure that the banner depends on.
 
+## Phase 7: Invalidate Main Page cache
+
+MediaWiki caches the rendered Main Page output. New `Featured:` pages won't appear (and the `{{PAGESINCATEGORY}}` count won't update) until the cache is dropped. Always run this as the final step, even if some Featured slots were skipped — the gate logic depends on category membership being current.
+
+```bash
+wai purge "Main Page" --force-link-update
+```
+
+`--force-link-update` rebuilds the page's link table so the new `Featured:` pages are immediately counted in `Category:Featured TFA` (powers the outer body gate).
+
+Requires `wai` ≥ 1.2.2. If the command isn't available, the user has an old CLI — print a note suggesting `wai update`, but don't fail the curator run.
+
 ## Voice and constraints
 
 - **Documentary, third-person, factual.** Same standard as person pages (see [[editorial-guide]]).
